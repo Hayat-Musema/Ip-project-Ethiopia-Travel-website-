@@ -35,7 +35,7 @@ Ethio Travel is a fully client-side web application built with HTML, CSS, and Ja
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yuti-AMZ/IP-project-Ethio-travel-website.git
+git clone https://github.com/Hayat-Musema/Ip-project-Ethiopia-Travel-website-.git)
 📝 Usage
 
 Navigate through Home, Destinations, Packages, Gallery, and Contact pages.
