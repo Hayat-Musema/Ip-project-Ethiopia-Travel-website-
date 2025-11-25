@@ -6,7 +6,7 @@ Ethio Travel is a modern, responsive web application showcasing Ethiopia's top t
 ---
 
 ## 🏖️ Overview
-Ethio Travel is a fully client-side web application built with HTML, CSS, and JavaScript. Users can explore travel destinations, view package details, browse galleries, and contact organizers through a simple, intuitive interface. The website is fully responsive for desktop, tablet, and mobile devices.
+Ethio Travel is a fully client-side web application built with HTML, CSS, and JavaScript. Users can explore travel destinations, view package details, browse galleries, and contact organizers through a simple, intuitive interface. The website is fully responsive for desktop, pc, tablet, and mobile devices.
 
 ---
 
