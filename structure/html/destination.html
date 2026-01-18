@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Destinations | Ethiopia Travel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Explore Destinations - Discover Ethiopia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Habesha pattern placeholder -->
-    <div>
-        <!-- Pattern will be added in CSS -->
-    </div>
-
-    <!-- Header -->
-    <header>
-        <h1>Ethiopia Destinations</h1>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="packages.html">Packages</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="brand">Discover Ethiopia</div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="about.html">About</a>
+                <a href="packages.html">Packages</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="cta" href="packages.html">Plan Your Trip</a>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <section>
-        <h2>Explore Ethiopia</h2>
+    <main class="dest-page">
+        <section class="dest-hero">
+            <div class="dest-hero-inner">
+                <h2>Explore Destinations</h2>
+                <p class="muted">Uncover the ancient mysteries and natural wonders of the Horn of Africa.</p>
 
-        <div>
+                <form id="filters" class="filters" onsubmit="return false;">
+                    <input id="destSearch" type="search" placeholder="Search destinations e.g. Lalibela, Simien">
+                    <select id="destRegion">
+                        <option value="all">All Regions</option>
+                        <option value="amhara">Amhara</option>
+                        <option value="oromia">Oromia</option>
+                        <option value="tigray">Tigray</option>
+                        <option value="afar">Afar</option>
+                        <option value="snnpr">SNNPR</option>
+                        <option value="addis">Addis Ababa</option>
+                    </select>
+                    <select id="destTheme">
+                        <option value="all">All Themes</option>
+                        <option value="history">History</option>
+                        <option value="trekking">Trekking</option>
+                        <option value="wildlife">Wildlife</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="culture">Culture</option>
+                    </select>
+                    <button id="applyFilters" class="apply">Apply</button>
+                    <button id="clearFilters" class="clear">Clear</button>
+                </form>
+            </div>
+        </section>
 
-            <div>
-                <img src="https://i.imgur.com/uWkSCV5.jpg" alt="Lalibela">
-                <h3>Lalibela</h3>
-                <p>Rock-hewn churches carved from a single stone.</p>
+        <section class="dest-grid-section" aria-label="Destinations">
+            <div id="dest-grid" class="featured-grid">
+                <!-- Cards rendered by JS -->
             </div>
 
-            <div>
-                <img src="https://i.imgur.com/2B352uA.jpg" alt="Axum">
-                <h3>Axum</h3>
-                <p>Ancient kingdom with obelisks and historic ruins.</p>
+            <div class="centered">
+                <button id="loadMoreBtn" class="load-more">Load More Destinations</button>
             </div>
-
-            <div>
-                <img src="https://i.imgur.com/PQczwyG.jpg" alt="Simien Mountains">
-                <h3>Simien Mountains</h3>
-                <p>Stunning cliffs and unique wildlife.</p>
+            <!-- Destination detail modal (opened when "View Details" is clicked) -->
+            <div id="destModal" class="modal hidden" aria-hidden="true">
+                <div class="modal-content" role="dialog" aria-modal="true">
+                    <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+                    <h3 id="modalTitle">Destination</h3>
+                    <p id="modalRegion" class="muted"></p>
+                    <p id="modalDesc"></p>
+                    <div style="margin-top:12px">
+                        <a id="modalDetailsLink" class="details cta" href="#">Open Detail Page</a>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div>
-                <img src="https://i.imgur.com/0D0c7aN.jpg" alt="Harar">
-                <h3>Harar</h3>
-                <p>Ancient walled city known for its culture.</p>
-            </div>
-
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="brand">Discover Ethiopia</div>
+            <div class="legal">&copy; 2026 Discover Ethiopia. All rights reserved.</div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Ethiopia Travel</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
