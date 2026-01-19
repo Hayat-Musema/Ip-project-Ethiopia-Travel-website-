@@ -1,40 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gallery | Ethiopia Travel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — Discover Ethiopia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="brand">Discover Ethiopia</div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="cta" href="packages.html">Plan Your Trip</a>
+    </div>
+  </header>
 
-    <div></div>
-
-    <header>
-        <h1>Photo Gallery</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="packages.html">Packages</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <section>
-        <h2>Ethiopia in Pictures</h2>
-
-        <div>
-            <img src="https://i.imgur.com/uWkSCV5.jpg" alt="Lalibela">
-            <img src="https://i.imgur.com/PQczwyG.jpg" alt="Simien Mountains">
-            <img src="https://i.imgur.com/g2O6RGU.jpg" alt="Harar">
-            <img src="https://i.imgur.com/2B352uA.jpg" alt="Axum">
-        </div>
+  <main class="gallery-page">
+    <section class="gallery-hero">
+      <div class="dest-hero-inner">
+        <h2>Gallery</h2>
+        <p class="muted">Stunning photos from across Ethiopia. Click thumbnails to open larger view.</p>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Ethiopia Travel</p>
-    </footer>
+    <section class="gallery-grid-section">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- thumbnails rendered by JS -->
+      </div>
+    </section>
 
+    <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+      <button id="lightboxClose" class="lightbox-close">✕</button>
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="brand">Discover Ethiopia</div>
+      <div class="legal">&copy; 2026 Discover Ethiopia. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
