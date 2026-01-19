@@ -2,53 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ethiopia Travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Ethiopia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div></div>
-
-    <header>
-        <h1>Discover Ethiopia</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="packages.html">Packages</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <section>
-        <h2>Journey Through History, Culture, and Adventure</h2>
-        <p>From Lalibela’s rock-hewn churches to the peaks of Simien Mountains, we curate unforgettable Ethiopian experiences.</p>
-        <button>Start Planning</button>
-    </section>
-
-    <section>
-        <h2>Highlights</h2>
-        <div>
-            <div>
-                <h3>Ancient Heritage</h3>
-                <p>Lalibela, Axum, Gondar</p>
-            </div>
-            <div>
-                <h3>Natural Wonders</h3>
-                <p>Simien Mountains, Danakil Depression</p>
-            </div>
-            <div>
-                <h3>Coffee Culture</h3>
-                <p>Origin stories & traditional ceremonies</p>
-            </div>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="brand">Discover Ethiopia</div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="about.html">About</a>
+                <a href="#packages">Packages</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="cta" href="packages.html">Plan Your Trip</a>
         </div>
-    </section>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <img class="hero-img" id="homeHeroImg" src="images/home-hero.jpg" alt="Ethiopia landscape" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop'">
+            <div class="hero-overlay">
+                <h1>Discover the Timeless
+                    <span class="accent">Beauty of Ethiopia</span>
+                </h1>
+                <p class="hero-sub">From the majestic peaks of Simien to the ancient rock-hewn churches of Lalibela.</p>
 
-    <footer>
-        <p>© 2025 Ethiopia Travel</p>
+                    <div class="hero-search">
+                    <input id="search" type="text" placeholder="Search destinations, cultures, nature...">
+                    <button id="searchBtn">Explore</button>
+                </div>
+
+                <div class="hero-stats">
+                    <span>9 UNESCO Sites</span>
+                    <span>3,000+ Years History</span>
+                </div>
+
+                <div class="hero-controls">
+                    <button id="prevHero" class="hero-nav">‹</button>
+                    <div id="heroDots" class="hero-dots" aria-hidden="true"></div>
+                    <button id="nextHero" class="hero-nav">›</button>
+                </div>
+            </div>
+        </section>
+        <section id="destinations" class="destinations-section">
+            <div class="section-header">
+                <h2>Explore by Region</h2>
+            </div>
+
+            <div class="regions" id="region-filters">
+                <button class="region active" data-region="all">All Regions</button>
+                <button class="region" data-region="addis">Addis Ababa</button>
+                <button class="region" data-region="amhara">Amhara</button>
+                <button class="region" data-region="oromia">Oromia</button>
+                <button class="region" data-region="tigray">Tigray</button>
+                <button class="region" data-region="snnpr">SNNPR</button>
+                <button class="region" data-region="afar">Afar</button>
+            </div>
+
+            <h3 class="subheading">Popular Themes</h3>
+            <div class="themes">
+                <button class="theme">Trekking</button>
+                <button class="theme">History</button>
+                <button class="theme">Cuisine</button>
+                <button class="theme">Wildlife</button>
+                <button class="theme">Festivals</button>
+                <button class="theme">Photography</button>
+            </div>
+
+            <div class="featured-grid" id="featured">
+                <article class="card" data-region="amhara">
+                    <img src="images/lalibela.jpg" alt="Lalibela">
+                    <div class="card-body">
+                        <div class="tag">Amhara</div>
+                        <h4>Lalibela</h4>
+                        <p class="muted">Explore the 12th-century rock-hewn churches.</p>
+                        <div class="card-foot">
+                            <span class="rating">4.9</span>
+                            <a class="details" href="#">Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-region="amhara">
+                    <img src="images/Simien%20Mountains,%20Ethiopia.jpg" alt="Simien">
+                    <div class="card-body">
+                        <div class="tag">Amhara / Tigray</div>
+                        <h4>Simien Mountains</h4>
+                        <p class="muted">Home to the Walia ibex and dramatic escarpments.</p>
+                        <div class="card-foot">
+                            <span class="rating">5.0</span>
+                            <a class="details" href="#">Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-region="afar">
+                    <img src="images/denakil.jpg" alt="Danakil">
+                    <div class="card-body">
+                        <div class="tag">Afar</div>
+                        <h4>Danakil Depression</h4>
+                        <p class="muted">A surreal landscape of salt flats and colorful minerals.</p>
+                        <div class="card-foot">
+                            <span class="rating">4.8</span>
+                            <a class="details" href="#">Details</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="home-panels">
+            <section id="about" class="about-section">
+                <h2>About Us</h2>
+                <div class="featured-grid">
+                    <article class="card">
+                        <div class="card-body">
+                            <h4>Who We Are</h4>
+                            <p class="muted">We connect curious travelers with authentic Ethiopian experiences — culture, nature, and adventure. We partner with local guides and communities to create responsible itineraries that showcase Ethiopia's history, wildlife, and vibrant traditions.</p>
+                            <div class="card-foot">
+                                <a class="details" href="about.html">Learn More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="packages" class="packages-section">
+                <h2>Travel Packages</h2>
+                <div class="featured-grid">
+                    <article class="card">
+                        <div class="card-body">
+                            <h4>Featured Packages</h4>
+                            <p class="muted">Curated itineraries: cultural escapes, trekking adventures, and extreme tours. Browse customizable trips tailored to your interests and travel pace.</p>
+                            <div class="card-foot"><a class="details" href="packages.html">Explore Packages</a></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="gallery" class="gallery-section">
+                <h2>Gallery</h2>
+                <div class="featured-grid">
+                    <article class="card">
+                        <div class="card-body">
+                            <h4>Gallery Highlights</h4>
+                            <p class="muted">Selected highlights showcasing historical sites, cultural portraits, and dramatic landscapes from across Ethiopia.</p>
+                            <div class="card-foot"><a class="details" href="gallery.html">View Gallery</a></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="brand">Ethiopia</div>
+            <div class="legal">&copy; 2026 Discover Ethiopia. All rights reserved.</div>
+        </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
