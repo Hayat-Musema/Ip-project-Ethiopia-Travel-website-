@@ -64,7 +64,7 @@ Contact organizers using the Contact form.
 
 Add interactive booking system with backend integration.
 
-Implement a search/filter system for destinations and packages.
+Implement a search and filter system for destinations and packages.
 
 Mobile app version for better accessibility.
 
